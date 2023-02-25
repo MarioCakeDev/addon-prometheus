@@ -17,7 +17,7 @@ RUN \
     ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi
 
-RUN apk --no-cache add python3=3.10.5-r0 
+RUN apk --no-cache add python3=3.11.2-r0
 RUN apk --no-cache add py3-idna=3.3-r2
 RUN apk --no-cache add py3-certifi=2021.10.8-r0
 RUN apk --no-cache add py3-chardet=4.0.0-r3
