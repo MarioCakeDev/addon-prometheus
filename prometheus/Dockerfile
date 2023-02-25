@@ -26,9 +26,9 @@ RUN \
         py3-urllib3=1.26.9-r0 \
         py3-requests=2.27.1-r0 \
     && apk --no-cache add --virtual .builddeps \
-        py-pip=22.1.1-r0 \
-    \
-    && curl -J -L -o /tmp/prometheus.tar.gz \
+        py-pip=22.1.1-r0
+
+RUN curl -J -L -o /tmp/prometheus.tar.gz \
         "https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/prometheus-${PROMETHEUS_VERSION}.linux-${ARCH}.tar.gz" \
     && adduser -s /bin/false -D -H prometheus \
     && cd /tmp \
