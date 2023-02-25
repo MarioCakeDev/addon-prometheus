@@ -15,7 +15,8 @@ COPY rootfs /
 # hadolint ignore=DL3003
 RUN \
     ARCH="${BUILD_ARCH}" \
-    && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
+    && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi
+
 RUN apk --no-cache add \
         python3=3.10.5-r0 \
         py3-idna=3.3-r2 \
