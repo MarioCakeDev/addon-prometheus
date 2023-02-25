@@ -6,7 +6,7 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base system
-ARG BUILD_ARCH=amd64
+ARG BUILD_ARCH=armv7
 ENV PROMETHEUS_VERSION=2.40.1
 
 # Copy root filesystem
